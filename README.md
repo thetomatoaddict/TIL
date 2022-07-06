@@ -2,6 +2,6 @@
 
 ## 목차
 
-* [Git](./git)
+* [Git](./Git)
 
-* [Markdown](./markdown)
+* [Markdown](./Markdown)
