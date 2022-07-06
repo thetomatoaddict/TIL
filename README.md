@@ -2,6 +2,6 @@
 
 ## 목차
 
-* [Git](./Git)
+220706 * [Git](./Git)
 
-* [Markdown](./markdown)
+220705 * [Markdown](./markdown)
