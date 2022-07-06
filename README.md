@@ -4,4 +4,4 @@
 
 * [Git](./Git)
 
-* [Markdown](./Markdown)
+* [Markdown](./markdown)
