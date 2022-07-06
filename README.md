@@ -1,4 +1,4 @@
-# Today i learned
+# 👻 *Today i learned 👻
 
 ## 목차
 
