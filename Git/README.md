@@ -1,4 +1,4 @@
-# Git
+# Git 
 
 
 
@@ -16,11 +16,17 @@
 
   
 
-- $ git add <파일명>\
+- $ git add <파일명>
 
-  커밋할 파일들을 staged 상태로 변경	
+  커밋할 파일들을 staged 상태로 변경
 
-  
+
+
+- $ git restore <파일명>
+
+  staged 상태의 파일을 unstage
+
+
 
 - $ git commit -m '<커밋메시지>'
 
