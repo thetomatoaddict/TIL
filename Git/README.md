@@ -24,7 +24,7 @@
 
 - $ git restore <파일명>
 
-  staged 상태의 파일을 unstage
+  파일의 내용을 마지막 커밋 상태로 되돌리거나 staged 상태의 파일을 unstage 함
 
 
 
