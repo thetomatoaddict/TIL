@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 👻Today i learned🧠
 
 ## 목차
