@@ -1,7 +1,8 @@
-# Today i learned
+# 👻Today i learned🧠
 
 ## 목차
 
-* [Git](./Git)
+* 220705 *[Markdown](./Markdown)
+* 220706 *[Git](./Git)
+* 220711* [Python](./Python)
 
-* [Markdown](./Markdown)
