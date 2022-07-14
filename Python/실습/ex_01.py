@@ -3,5 +3,5 @@
 def cube(n):
     return(n**3)
 
-n=int(input())
+n=12
 print(cube(n))
