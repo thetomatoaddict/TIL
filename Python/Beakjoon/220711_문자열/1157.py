@@ -3,7 +3,7 @@
 # 단, 대문자와 소문자를 구분하지 않는다.
 
 a=input()
-a_list=sorted(a.upper())#알파벳순으로 정렬하여 리스트로 저장
+a_list=sorted(a.upper())#알파벳순으로 정렬하여 대문자 리스트로 저장
 max_c=1
 result=str()
 for i in range(65,91): #대문자 아스키코드로 알파벳 26개마다 일치하는 갯수 검사
