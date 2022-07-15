@@ -1,0 +1,140 @@
+{
+  "main": {
+    "id": "41d2a41c88fcbb25",
+    "type": "split",
+    "children": [
+      {
+        "id": "99912c73b1e4b61e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Python/README.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d8c736ab326d660a",
+    "type": "split",
+    "children": [
+      {
+        "id": "c4f40d5b5d50f6fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d55e3fa22d5a020",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "6fc76b93dcb38a19",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "783e0f6f2480b831",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c8df84e8925c169b",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a644ef4ac9ad287",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3b518b286323827",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Python/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4e3eb633d82ebbac",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Python/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "719fb07474189fc7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a42038f6129a26f6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Python/README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "99912c73b1e4b61e",
+  "lastOpenFiles": [
+    "README.md",
+    "Python/README.md",
+    "Markdown/README.md",
+    "Markdown/markdown_practice.md",
+    "Git/README.md",
+    "Git/branch.md"
+  ]
+}

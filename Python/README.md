@@ -164,6 +164,8 @@
   - [문자열 지우기(strip)](https://wikidocs.net/13#strip)
   - [문자열 바꾸기(replace)](https://wikidocs.net/13#replace)
   - [문자열 나누기(split)](https://wikidocs.net/13#split)
+  - 문자열이 ~로 끝나는 것을 찾기(endwith)
+  - 문자열이 ~로 시작하는 것을 찾기(startswith)
 - 레인지 : 숫자의 나열, range(n, m s) 로 수열 생성 가능
 - 리스트 : 변경 가능한 값들의 나열, []
   - [리스트에 요소 추가(append)](https://wikidocs.net/14#append)
@@ -238,4 +240,6 @@
   [2, 4, 6, 8]
   ```
 
-  
+
+#### print
+- f string 사용하기 ex)print(f'{n}일차\n')
