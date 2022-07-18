@@ -1,6 +1,13 @@
-import sys
-import math
+n = int(input()) # 설탕
 
-A, B, V = map(int, sys.stdin.readline().split()) 
-x = (V - A)/(A - B)    # x(A-B) + A => V
-print(math.ceil(x) + 1 )
+result = 0 # 봉지 수
+
+while n >= 0:
+    if n % 5 == 0: # 5로 나눈 나머지가 0인 경우
+        result += n // 5 # 5로 나눈 몫 추력
+        print(result)
+        break
+    n -= 3 # 설탕이 5의 배수가 될때까지 반복
+    result += 1 # 봉지 추가
+else:
+    print(-1) # while문이 거짓이 되면 -1 출력
