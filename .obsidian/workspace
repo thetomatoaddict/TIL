@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Python/README.md",
+            "file": "vscode/README.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python/README.md",
+                "file": "vscode/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/README.md",
+                "file": "vscode/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python/README.md"
+                "file": "vscode/README.md"
               }
             }
           }
@@ -130,10 +130,11 @@
   },
   "active": "99912c73b1e4b61e",
   "lastOpenFiles": [
+    "Markdown/markdown_practice.md",
+    "vscode/README.md",
+    "Markdown/README.md",
     "README.md",
     "Python/README.md",
-    "Markdown/README.md",
-    "Markdown/markdown_practice.md",
     "Git/README.md",
     "Git/branch.md"
   ]

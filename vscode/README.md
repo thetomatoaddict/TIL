@@ -37,3 +37,8 @@ Ctrl + Home / End
 #### 사이드바 숨기기
 
 Ctrl + B
+
+#### 기본 단축키
+
+![[Pasted image 20220718132351.png]]
+

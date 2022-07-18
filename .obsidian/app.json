@@ -1,6 +1,6 @@
 {
   "livePreview": true,
-  "autoPairMarkdown": false,
+  "autoPairMarkdown": true,
   "autoConvertHtml": true,
   "autoPairBrackets": true,
   "defaultViewMode": "source"
