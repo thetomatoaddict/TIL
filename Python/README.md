@@ -242,4 +242,8 @@
 
 
 #### print
-- f string 사용하기 ex)print(f'{n}일차\n')
+- f string 사용하기
+	- 변수와 문자열을 같이 출력하기
+		- print(f'{n}일차\n')
+	- 결과값을 반올림하여 출력하기
+		- print(f'#{i+1}',f'{sum(nums)/10:.0f}')
