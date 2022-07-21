@@ -113,6 +113,8 @@
 - 논리연산자(and, or, not) 사용하여 검증
 
 - bool() 함수로 True인지 False인지 검증
+  
+- int(x==y) 로 사용할 경우 true가 1, false가 0으로 출력됨
 
   
 
@@ -247,3 +249,187 @@
 		- print(f'{n}일차\n')
 	- 결과값을 반올림하여 출력하기
 		- print(f'#{i+1}',f'{sum(nums)/10:.0f}')
+
+
+### 1. 내장된 math 함수
+
+어떤 모듈도 import 하지 않고 사용할 수 있는 내장함수들입니다.
+
+#### min, max 함수
+
+min은 최소값, max는 최대값을 리턴해줍니다.
+
+```python
+x = min(-5, 0, 5, 10)
+y = max(-5, 0, 5, 10)
+print(x)
+print(y)
+```
+
+Output:
+
+```log
+-5
+10
+```
+
+#### abs 함수
+
+abs는 절대값을 리턴해 줍니다.
+
+```python
+x = abs(-12.34)
+y = abs(12.34)
+print(x)
+print(y)
+```
+
+Output:
+
+```log
+12.34
+12.34
+```
+
+#### pow 함수
+
+pow는 숫자를 제곱하여 리턴합니다. 아래 코드는 2를 4번 제곱한 값을 리턴합니다.
+
+```python
+x = pow(2, 4)
+print(x)
+```
+
+Output:
+
+```log
+16
+```
+
+#### round 함수
+
+round는 정수를 반올림한 값을 리턴합니다. 소수가 `0.5`라면 무조건 올림하지 않고 짝수에 가까운 값을 리턴합니다.
+
+```python
+x = round(2.5)
+y = round(3.5)
+z = round(-5.6)
+print(x)
+print(y)
+print(z)
+```
+
+Output:
+
+```log
+2
+4
+-6
+```
+
+### 2. math 모듈 import 및 사용 방법
+
+다음과 같이 math 모듈을 import할 수 있습니다.
+
+```python
+import math
+```
+
+#### ceil 함수
+
+ceil은 소수를 올림한 값을 리턴합니다.
+
+```python
+x = math.ceil(2.5)
+y = math.ceil(3.5)
+print(x)
+print(y)
+```
+
+Output:
+
+```log
+3
+4
+```
+
+#### floor 함수
+
+floor는 소수를 버림한 정수를 리턴합니다.
+
+```python
+x = math.floor(2.5)
+y = math.floor(3.5)
+print(x)
+print(y)
+```
+
+Output:
+
+```log
+2
+3
+```
+
+#### sqrt 함수
+
+sqrt는 인자로 전달된 정수의 제곱근을 리턴합니다.
+
+```python
+x = math.sqrt(36)
+print(x)
+```
+
+Output:
+
+```log
+6
+```
+
+#### fabs 함수
+
+fabs는 abs와 마찬가지로 절대값을 리턴합니다.
+
+```python
+x = math.fabs(-12.34)
+y = math.fabs(12.34)
+print(x)
+print(y)
+```
+
+Output:
+
+```log
+12.34
+12.34
+```
+
+#### pi 함수
+
+pi는 PI 값을 리턴합니다.
+
+```python
+x = math.pi
+print(x)
+```
+
+Output:
+
+```log
+3.141592653589793
+```
+
+#### exp 함수
+
+exp는 지수함수 값을 리턴합니다.
+
+```python
+x = math.exp(1)
+print(x)
+```
+
+Output:
+
+```log
+2.718281828459045
+```

@@ -3,5 +3,6 @@
   "autoPairMarkdown": true,
   "autoConvertHtml": true,
   "autoPairBrackets": true,
-  "defaultViewMode": "source"
+  "defaultViewMode": "source",
+  "promptDelete": false
 }

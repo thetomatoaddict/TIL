@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "99912c73b1e4b61e",
+        "id": "1683e85248de2784",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "vscode/README.md",
+            "file": "Python/README.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vscode/README.md",
+                "file": "Python/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vscode/README.md",
+                "file": "Python/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vscode/README.md"
+                "file": "Python/README.md"
               }
             }
           }
@@ -128,13 +128,14 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "99912c73b1e4b61e",
+  "active": "1683e85248de2784",
   "lastOpenFiles": [
-    "Python/README.md",
-    "vscode/README.md",
     "Markdown/markdown_practice.md",
-    "Markdown/README.md",
+    "2022-07-20.md",
+    "Python/README.md",
     "README.md",
+    "vscode/README.md",
+    "Markdown/README.md",
     "Git/README.md",
     "Git/branch.md"
   ]
