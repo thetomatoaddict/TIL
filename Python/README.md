@@ -433,3 +433,25 @@ Output:
 ```log
 2.718281828459045
 ```
+
+
+#### lambda 함수 활용예시
+
+이 조건문범벅은
+
+```
+result = {'cast':[],'crew':[]}
+for i in response['cast']:
+  if i['cast_id'] < 10 :
+  result['cast'].append(i['name'])
+for i in response['crew']:
+  if i['department'] == 'Directing':
+  result['crew'].append(i['name'])
+```
+
+람다 함수로 이렇게 줄일 수 있다.
+
+```
+cast = list(map(lambda x : x['name'], filter(lambda x : x['cast_id'] < 10 , res['cast'])))
+crew = list(map(lambda x : x['name'], filter(lambda x : x['department'] == 'Directing', res['crew'])))
+```
