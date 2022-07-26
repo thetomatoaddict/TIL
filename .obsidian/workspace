@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "README.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -130,13 +130,14 @@
   },
   "active": "1683e85248de2784",
   "lastOpenFiles": [
+    "Git/README.md",
+    "Markdown/README.md",
     "Python/README.md",
+    "vscode/README.md",
+    "Pasted image 20220718132351.png",
     "README.md",
     "Markdown/markdown_practice.md",
     "2022-07-20.md",
-    "vscode/README.md",
-    "Markdown/README.md",
-    "Git/README.md",
     "Git/branch.md"
   ]
 }
