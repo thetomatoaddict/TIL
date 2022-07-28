@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Python/문제풀이하기전에.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Python/문제풀이하기전에.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Python/문제풀이하기전에.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Python/문제풀이하기전에.md"
               }
             }
           }
@@ -130,12 +130,12 @@
   },
   "active": "1683e85248de2784",
   "lastOpenFiles": [
+    "README.md",
     "Git/README.md",
     "Markdown/README.md",
     "Python/README.md",
     "vscode/README.md",
     "Pasted image 20220718132351.png",
-    "README.md",
     "Markdown/markdown_practice.md",
     "2022-07-20.md",
     "Git/branch.md"
