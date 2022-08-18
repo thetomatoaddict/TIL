@@ -370,6 +370,14 @@ SELECT * FROM table_name;
 
 ![image-20220817131727974](sqlite.assets/image-20220817131727974.png)
 
+
+
+![image-20220818135455037](sqlite.assets/image-20220818135455037.png)
+
+
+
+
+
 ## 쿼리 예시커맨드
 
 ```sqlite
@@ -411,5 +419,141 @@ SELECT last_name, first_name, balance FROM users ORDER BY balance DESC LIMIT 10;
 -- 계좌 잔액 내림차순(높은->낮은 것), 성 오름차순(ㄱ->ㅎ)
 SELECT last_name, first_name, balance FROM users ORDER BY balance DESC, last_name ASC LIMIT 10;
 
+----------------------------------------------------------------------------
+
+SELECT * FROM users LIMIT 1;
+
+-- pipe sign 엔터 위에 있어요 보통
+-- 문자열 합치기 ||
+-- (성+이름) 출력, 5명만
+SELECT 
+    last_name || first_name 이름,
+    age,
+    country,
+    phone,
+    balance
+FROM users
+LIMIT 5;
+
+-- 이름   age  country  phone          balance
+-- ---  ---  -------  -------------  -------
+-- 유정호  40   전라북도     016-7280-2855  370
+-- 이경희  36   경상남도     011-9854-5133  5900
+-- 구정자  37   전라남도     011-4177-8170  3100
+-- 장미경  40   충청남도     011-9079-4419  250000
+-- 차영환  30   충청북도     011-2921-4284  220
+
+-- 문자열 길이 LENGTH
+SELECT 
+    LENGTH(first_name),
+    first_name
+FROM users
+LIMIT 5;
+-- LENGTH(first_name)  first_name
+-- ------------------  ----------
+-- 2                   정호
+-- 2                   경희
+-- 2                   정자
+-- 2                   미경
+-- 2                   영환
+
+-- 문자열 변경 REPLACE
+-- 016-7280-2855 => 01672802855
+SELECT 
+    first_name,
+    phone,
+    REPLACE(phone, '-', '')
+FROM users
+LIMIT 5;
+
+-- 숫자 활용
+SELECT MOD(5, 2)
+FROM users
+LIMIT 1;
+
+-- 올림, 내림, 반올림
+SELECT CEIL(3.14), FLOOR(3.14), ROUND(3.14)
+FROM users
+LIMIT 1;
+
+-- 9의 제곱근
+SELECT SQRT(9)
+FROM users
+LIMIT 1;
+
+-- 9^2
+SELECT POWER(9, 2)
+FROM users
+LIMIT 1;
+
+----------------------------------------------------------------
+
+-- GROUP BY
+
+-- 성별 갯수
+SELECT last_name, COUNT(*)
+FROM users
+GROUP BY last_name;
+
+-- GROUP BY에서 활용하는 컬럼을 제외하고는
+-- 집계함수를 쓰세요.
+SELECT last_name, AVG(age), COUNT(*)
+FROM users
+GROUP BY last_name;
+
+-- 참고...
+SELECT last_name, age
+FROM users
+WHERE last_name = '곽';
+-- last_name  age
+-- ---------  ---
+-- 곽          25
+-- 곽          30
+-- 곽          28
+-- 곽          15
+
+-- GROUP BY는 결과가 정렬되지 않아요. 기존 순서와 바뀜
+-- 원칙적으로 내가 정렬해서 보고 싶으면 ORDER BY!
+
+SELECT *
+FROM users
+LIMIT 5;
+-- first_name  last_name  age  country  phone          balance       
+-- ----------  ---------  ---  -------  -------------  -------       
+-- 정호          유          40   전라북도     016-7280-2855  370    
+-- 경희          이          36   경상남도     011-9854-5133  5900   
+-- 정자          구          37   전라남도     011-4177-8170  3100   
+-- 미경          장          40   충청남도     011-9079-4419  250000 
+-- 영환          차          30   충청북도     011-2921-4284  220  
+
+SELECT last_name, COUNT(*)
+FROM users
+GROUP BY last_name
+LIMIT 5;
+
+-- last_name  COUNT(*)
+-- ---------  --------
+-- 강          23
+-- 고          10
+-- 곽          4
+-- 구          2
+-- 권          17
+
+-- GROUP BY WHERE를 쓰고 싶다.
+-- 100번 이상 등장한 성만 출력하고 싶음. 
+SELECT last_name, COUNT(last_name)
+FROM users
+WHERE COUNT(last_name) > 100
+GROUP BY last_name;
+-- 오류 발생!
+-- Parse error: misuse of aggregate: COUNT()
+--   LECT last_name, COUNT(last_name) FROM users WHERE COUNT(last_name) > 100 GROUP
+
+-- 조건에 따른 GROUP 하시려면
+-- HAVING을 쓴다!(HAVING절에는 집계함수-avg,count-만 사용)
+SELECT last_name, COUNT(last_name)
+FROM users
+GROUP BY last_name
+HAVING COUNT(last_name) > 100;
 ```
 
