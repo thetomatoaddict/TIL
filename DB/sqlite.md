@@ -557,3 +557,210 @@ GROUP BY last_name
 HAVING COUNT(last_name) > 100;
 ```
 
+
+
+## Join
+
+관계형 데이터베이스의 가장 큰 장점이자 핵심적인 기능
+
+일반적으로 데이터베이스에는 하나의 테이블에 많은 데이터를 저장하는것이 아닌, 여러 테이블로 나눠 저장하게 되며, 여러 테이블을 결합(Join)하여 출력하여 활용한다. 일반적으로 레코드는 기본키(PK)나 외래키(FK) 값의 관계에 의해 결합한다.
+
+#### 대표적인 JOIN
+
+- INNER JOIN : 두 테이블에 모두 일치하는 행만 반환 (교집합)
+
+  ```
+  -- 테이블1과 테이블2에서 값이 일치하는 것들만 가져옴
+  SELECT *
+  FROM 테이블1 [INNER](생략가능) JOIN 테이블2
+  ON 테이블1.컬럼 = 테이블2.컬럼
+  
+  SELECT *
+  FROM users JOIN role
+  ON users.role_id = role.id;
+  -- 스태프(2)만 출력
+  SELECT *
+  FROM users JOIN role
+  ON users.role_id = role.id
+  WHERE role.id = 2;
+  -- 이름을 내림차순으로
+  SELECT *
+  FROM users JOIN role
+  ON users.role_id = role.id
+  WHERE role.id = 2
+  ORDER BY users.name DESC;
+  ```
+
+- OUTER JOIN : 동일한 값이 없는 행도 반환할때 사용
+
+  - 기준이 되는 테이블에 따라 LEFT/RIGHT/FULL을 지정함
+
+  ```
+  SELECT *
+  FROM 테이블1 [LEFT|RIGHT|FULL] OUTER JOIN 테이블2
+  ON 테이블1.컬럼 = 테이블2.컬럼
+  
+  SELECT *
+  FROM articles LEFT OUTER JOIN users
+  ON articles.user_id = users.id;
+  ```
+
+- CROSS JOIN : 모든 데이터의 조합
+
+  ```
+  SELECT *
+  FROM users CROSS JOIN role
+  ```
+
+
+
+## ORM
+
+#### 1. ORM(Object Relational Mapping)
+
+- 객체 지향 프로그래밍 언어를 사용하여 호환되지 않는 유형의 시스템 간의 데이터를 변환하는 프로그래밍 기술
+
+- 파이썬에서는 SQLAIchemy, peewee 등 라이브러리가 있으며, Django 프레임워크에서는 내장 Django ORM을 활용
+
+- "객체(object)로 DB를 조작한다"
+
+  ```
+  Genre.objects.all()
+  ```
+
+- DB 조작(관리) 시 모델링 파트, 테이블 조작 파트가 따로 존재
+
+  - 모델링 할 땐 class 생성, 테이블 조작 할 땐 Migration ⭐️
+  - 참고) CRUD Operation은 객체를 조작하면서 작동
+  - 모델 설계 및 반영
+
+  ```
+  - 1. 클래스를 생성하여 내가 원하는 DB의 구조를 만듦
+  class Genre(models.Model):
+  	name = models.CharField(max_length = 30)
+  	
+  - 2. 클래스의 내용으로 데이터베이스에 반영하기 위한 마이그레이션 파일을 '자동' 생성
+  $ python manage.py makemigrations
+  
+  - 3. DB에 migrate
+  $ python manage.py migrate
+  ```
+
+  > Migration(마이그레이션)
+  >
+  > - Model에 생긴 변화를 DB에 반영하기 위한 방법
+  > - 마이그레이션 파일을 만들어 DB 스키마를 반영
+  > - 명령어
+  >   - `makemigrations` : 마이그레이션 파일 생성
+  >   - `migrate` : 마이그레이션을 DB에 반영
+
+  - Migrate 살펴보기
+
+  ```
+  BEGIN;
+  --
+  -- Create model Genre
+  -- 
+  CREATE TABLE "db_genre" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(30 NOT NULL);
+  COMMIT;
+  
+  -- cf) 트랜잭션
+  ```
+
+- 데이터베이스 조작(Database API)
+
+  ```
+  Genre.         objects.     all()
+  #Class Name    #MANAGER     #QuerySet API
+  ```
+
+#### 2. ORM 기본 조작
+
+- Create
+
+  ```
+  # 1. create 메서드 활용
+  Genre.objects.create(name = '발라드')
+  
+  # 2. 인스턴스 조작
+  genre = Genre()
+  genre.name = '인디밴드'
+  genre.save()
+  ```
+
+  **✏️ `Get`과 `Filter`의 차이** ⭐️
+
+  ```
+  In [14]: Genre.objects.get(id=1)
+  Out[14]: <Genre: Genre object (1)>
+  -> 반드시 하나. 없거나, 많으면 오류 띄움
+  -> PK : PRIMARY KEY 사용은 get 사용
+  
+  In [15]: Genre.objects.filter(id=1)
+  Out[15]: <QuerySet [<Genre: Genre object (1)>]>
+  -> 무조건 결과가 QuerySet(일종의 리스트)
+  ```
+
+- Read
+
+  ```
+  # 1. 전체 데이터 조회
+  Genre.objects.all()
+  # <QuerySet [<Genre: Genre object (1)>, <Genre: Genre object (2)>, <Genre: Genre object (3)>]>
+  
+  # 2. 일부 데이터 조회(get)
+  Genre.objects.get(id=1)
+  # <Genre: Genre object (1)>
+  
+  # 3. 일부 데이터 조회(filter)
+  Genre.objects.filter(id=1)
+  # <QuerySet [<Genre: Genre object (1)>]>
+  ```
+
+- Update
+
+  ```
+  # Create는 처음부터 새로 만드는 것, Update는 기존 테이블을 가져와서 수정하는 것
+  
+  # 1. genre 객체 활용
+  genre = Genre.objects.get(id=1)
+  
+  # 2. genre 객체 속성 변경
+  genre.name = '트로트'
+  
+  # 3. genre 객체 저장
+  genre.save()
+  ```
+
+- Delete
+
+  ```
+  # 1. genre 객체 활용
+  genre = Genre.objects.get(id=1)
+  
+  # 2. genre 객체 삭제
+  genre.delete()
+  
+  # 이렇게도 사용 가능
+  Genre.objects.get(id=1).delete()
+  # 파이썬에서 '  abc  '.strip().upper() 같은 느낌으로 작동
+  ```
+
+- Artist 모델 생성
+
+  ```
+  class Artist(models.Model);
+  	name = models.CharField(max_length=30)
+    debut = models.DateField()
+  ```
+
+- 마이그레이션 파일 생성 ➡️ 마이그레이션을 DB에 반영
+
+  ```
+  $ python manage.py makemigrations
+  $ python manage.py migrate
+  ```
+
+- 관련자료
+
+  https://blog.naver.com/yjkang0383/222646973540
