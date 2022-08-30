@@ -1,0 +1,23 @@
+/* 아래에 CSS를 작성해주세요. */
+* {
+    box-sizing: border-box;
+  }
+
+  .card {
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+
+  }
+  .card-image {
+    width: 300px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .profile {
+    line-height:5px;
+    margin-left: 10px;
+    letter-spacing: -2px;
+    
+  }

@@ -1,0 +1,35 @@
+/* 아래에 CSS를 작성해주세요. */
+* {
+    box-sizing: border-box;
+  }
+  .box {
+    position: absolute; 
+    left: 0;
+    right: 0;
+    width:900px;
+    margin: 10px auto;
+  }
+  .card {
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+
+  }
+  .card-image {
+    width: 300px;
+    border-radius: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    text-align: center;
+    line-height:1px;
+    margin-bottom: 50px;
+    letter-spacing: 10%;
+  }
+  .profile {
+    line-height:1px;
+    margin-left: 15px;
+    letter-spacing: -1px;
+    
+  }
