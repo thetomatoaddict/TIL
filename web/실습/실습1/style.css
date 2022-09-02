@@ -2,17 +2,31 @@
 * {
     box-sizing: border-box;
   }
-  .box {
-    position: absolute; 
-    left: 0;
-    right: 0;
-    width:900px;
-    margin: 10px auto;
+  .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+
   }
-  .card {
+  .card_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    position: relative;
     width: 300px;
     height: 400px;
-    display: inline-block;
+
+  }
+  .card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    margin-left: 10px;
 
   }
   .card-image {
@@ -22,7 +36,9 @@
   }
 
   .title {
+    display: flex;
     text-align: center;
+    flex-direction: column;
     line-height:1px;
     margin-bottom: 50px;
     letter-spacing: 10%;
