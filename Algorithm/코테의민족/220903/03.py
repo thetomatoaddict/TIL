@@ -9,6 +9,8 @@ for _ in range(n):
 for _ in range(n):
     driveout.append(input())
 
+    
+
 while driveout :
     if drivein[0] != driveout[0] :
         drivein.pop(drivein.index(driveout.popleft()))

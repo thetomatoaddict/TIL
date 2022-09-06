@@ -6,11 +6,12 @@ def solution(id_list, report, k):
     dict2={}
     answer=[]
     report=list(set(report))
-    for i in id_list:
+
+    #신고당한 유저
+    for i in id_list: 
         dict1[i]=[]
         dict2[i]=[]
     for j in report:
-        print(list(j.split())[1])
         dict1[list(j.split())[1]].append(1)
     for i,j in dict1.items():
         if sum(j) < k :
@@ -18,7 +19,7 @@ def solution(id_list, report, k):
         elif sum(j) >= k :
             dict1[i]=[1]
     
-
+    # 신고 한 사람
     for i in report:
         if sum(dict1[list(i.split())[1]]) == 1:
             dict2[list(i.split())[0]].append(1)
