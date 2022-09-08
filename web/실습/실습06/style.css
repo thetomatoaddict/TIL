@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'RixInooAriDuriR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'RixInooAriDuriR';
+    min-width: 1280px;
+    color: #333333;
+  }
+
+.movie-poster:hover{
+    transition: all 0.2s linear;
+    transform: scale(1.05);
+    overflow: hidden;
+}
+
+.footer {
+    display: flex;
+    height: 3rem;
+    background-color: #ffc107;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text {
+    color: #FFFFFF;
+    background:transparent;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    color: #FFFFFF;
+    background: transparent;
+    }
+
+.logo {
+    text-shadow: 0 1px 0px #245974, 1px 0 0px #3b6c81, 1px 2px 1px #245974, 2px 1px 1px #3b6c81, 2px 3px 2px #245974, 3px 2px 2px #3b6c81, 3px 4px 2px #245974, 4px 3px 3px #3b6c81, 4px 5px 3px #245974, 5px 4px 2px #3b6c81, 5px 6px 2px #245974, 6px 5px 2px #3b6c81, 6px 7px 1px #245974, 7px 6px 1px #3b6c81, 7px 8px 0px #245974, 8px 7px 0px #3b6c81, 2px 2px 2px rgba(206,89,55,0);
+    color: #FFFFFF;
+    background: transparent;
+    }
