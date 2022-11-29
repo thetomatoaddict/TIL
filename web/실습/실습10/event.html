@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">버튼</button>
+    <h1 id="n">0</h1>
+    <script>
+        //아이디가 btn인 요소를 쿼리해오자
+        const btn = document.querySelector("#btn")
+        const n = document.querySelector("#n")
+        let cnt = 0
+        
+        btn.addEventListener("click", function(){
+            cnt ++
+            n.innerText = cnt
+
+        })
+    </script>
+    
+</body>
+</html>

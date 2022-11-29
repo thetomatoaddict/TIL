@@ -1,0 +1,13 @@
+@media all and (min-width: 992px) {
+    .naeyong .x700{display:block;}
+    .naeyong .x490{display:none;}
+    
+  
+  }
+  
+  @media all and (max-width: 992px) {
+    .naeyong .x700{display:none;}
+    .naeyong .x490{display:block;}
+  
+  }
+  

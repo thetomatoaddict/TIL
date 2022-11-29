@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn1">마우스오버</button>
+    <script>
+        console.log("hi")
+        const title = document.createElement('h1')
+        title.innerText = "js기초"
+        const body = document.querySelector('body')
+        body.appendChild(title)
+    
+
+        const a = document.createElement('a')
+        a.innerText = "네이버로 가기"
+        a.setAttribute('href', 'https://naver.com')
+        body.appendChild(a)
+
+
+        if (a.innerText == '1132') {
+            title.setAttribute('class','red')
+        }
+
+        const btn1 = document.querySelector('#btn1')
+        btn1.addEventListener('click', function() {
+            title.classList.toggle('blue')
+        })
+
+
+
+
+    </script>
+</body>
+</html>
